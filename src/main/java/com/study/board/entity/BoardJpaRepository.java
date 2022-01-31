@@ -19,7 +19,7 @@ public class BoardJpaRepository {
     public Board findOne(Long id){
         return em.find(Board.class,id);
     }
-``
+
     public List<Board> findAll() {
         return em.createQuery("select b from Board b",Board.class)
                 .getResultList();
